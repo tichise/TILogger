@@ -53,9 +53,9 @@ class RootViewController: UITableViewController, UIAdaptivePresentationControlle
 
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                TILogger().debug(message: "test")
+                TILogger().debug("test")
             } else if indexPath.row == 1 {
-                TILogger().verbose(message: "test")
+                TILogger().verbose("test")
             }
         }
 

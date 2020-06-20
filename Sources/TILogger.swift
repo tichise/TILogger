@@ -5,31 +5,57 @@ import Foundation
 
 public class TILogger {
 
+    private var prefix = "TILogger"
+    private var dateFormat = "yyyy/MM/dd HH:mm:ss"
+    private var logOutputType: LogOutputType = .console
+
     public init() {
     }
-
-    public func verbose(message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-        printToConsole(logLevel: .verbose, message: message, file: file, function: function, line: line)
-    }
-
-    public func debug(message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-        printToConsole(logLevel: .debug, message: message, file: file, function: function, line: line)
-    }
-
-    public func info(message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-        printToConsole(logLevel: .info, message: message, file: file, function: function, line: line)
-    }
-
-    public func warning(message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-        printToConsole(logLevel: .warning, message: message, file: file, function: function, line: line)
+    
+    public func setPrefix(_ prefix: String) -> Self {
+        self.prefix = prefix
+        
+        return self
     }
     
-    public func error(message: Any, file: String = #file, function: String = #function, line: Int = #line) {
-        printToConsole(logLevel: .error, message: message, file: file, function: function, line: line)
+    public func setDateFormat(_ dateFormat: String) -> Self {
+        self.dateFormat = dateFormat
+        
+        return self
+    }
+
+    public func verbose(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        outputLog(logLevel: .verbose, message: message, file: file, function: function, line: line)
+    }
+
+    public func debug(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        outputLog(logLevel: .debug, message: message, file: file, function: function, line: line)
+    }
+
+    public func info(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        outputLog(logLevel: .info, message: message, file: file, function: function, line: line)
+    }
+
+    public func warning(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        outputLog(logLevel: .warning, message: message, file: file, function: function, line: line)
+    }
+    
+    public func error(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        outputLog(logLevel: .error, message: message, file: file, function: function, line: line)
+    }
+    
+     func outputLog(logLevel: LogLevel, message: Any, file: String, function: String, line: Int) {
+        #if DEBUG
+
+        switch logOutputType {
+        case .console:
+            printToConsole(logLevel: logLevel, message: message, file: file, function: function, line: line)
+        }
+        
+        #endif
     }
     
     func printToConsole(logLevel: LogLevel, message: Any, file: String, function: String, line: Int) {
-        #if DEBUG
         
         let fileComponents = file.components(separatedBy: "/")
         var file = fileComponents.last ?? ""
@@ -40,12 +66,11 @@ public class TILogger {
         let codePosition = file + " #" + String(line) + " " + function
 
         // Xcodeのコンソールに出力
-        let logHeader = dateString + " Logger"+" "+logLevel.rawValue+" "+codePosition+" - "
+        prefix = prefix.count == 0 ? prefix : prefix + " "
+        let logHeader = dateString + " "+prefix+logLevel.rawValue+" "+codePosition+" - "
         
         print(logHeader, terminator: "")
         print(message)
-        
-        #endif
     }
     
     enum LogLevel: String {
@@ -55,11 +80,15 @@ public class TILogger {
         case warning = "💛 WARNING"
         case error = "❤️ ERROR"
     }
+    
+    enum LogOutputType {
+        case console
+    }
 
     var dateString: String {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        formatter.dateFormat = dateFormat
         return formatter.string(from: date)
     }
 }

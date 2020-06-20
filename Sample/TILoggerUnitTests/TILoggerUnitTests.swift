@@ -17,10 +17,12 @@ class TILoggerUnitTests: XCTestCase {
     }
     
     func testExample() {
-        TILogger().verbose(message: "test")
-        TILogger().debug(message: "test")
-        TILogger().info(message: "test")
-        TILogger().warning(message: "test")
-        TILogger().error(message: "test")
+        TILogger().setPrefix("").verbose("test")
+        TILogger().setPrefix("log").debug("test")
+        TILogger().setPrefix("TILogger").setDateFormat("yyyy/MM/dd HH:mm:ss").info("test")
+        TILogger().setPrefix("TILogger").setDateFormat( "HH:mm:ss").info("test")
+        TILogger().warning("test")
+        TILogger().error("test")
+        TILogger().verbose(2333)
     }
 }

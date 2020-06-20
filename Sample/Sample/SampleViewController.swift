@@ -11,7 +11,7 @@ class SampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TILogger().debug(message: "test")
+        TILogger().debug("test")
     }
 
     override func didReceiveMemoryWarning() {
