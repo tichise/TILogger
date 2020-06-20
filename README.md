@@ -2,10 +2,6 @@
 
 TILogger is a simple logger for swift.
 
-### Image
-#### iPhone
-<img src="" width="400px">
-
 ### Examples
 
 #### Swift
