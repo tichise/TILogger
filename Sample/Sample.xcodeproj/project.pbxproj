@@ -39,7 +39,7 @@
 		798269041F1F269B0090613B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		798269071F1F269B0090613B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		798269091F1F269B0090613B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7982690E1F1F269B0090613B /* TILoggerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TILoggerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7982690E1F1F269B0090613B /* SampleUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		798269121F1F269B0090613B /* TILoggerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILoggerUnitTests.swift; sourceTree = "<group>"; };
 		798269141F1F269B0090613B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A030DF94DD58B1A44B61A0D7 /* Pods-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				798268FA1F1F269B0090613B /* Sample.app */,
-				7982690E1F1F269B0090613B /* TILoggerUnitTests.xctest */,
+				7982690E1F1F269B0090613B /* SampleUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 			productReference = 798268FA1F1F269B0090613B /* Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7982690D1F1F269B0090613B /* TILoggerUnitTests */ = {
+		7982690D1F1F269B0090613B /* SampleUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 798269251F1F269C0090613B /* Build configuration list for PBXNativeTarget "TILoggerUnitTests" */;
+			buildConfigurationList = 798269251F1F269C0090613B /* Build configuration list for PBXNativeTarget "SampleUnitTests" */;
 			buildPhases = (
 				D8F8D2B702D51C2DA9AB421F /* [CP] Check Pods Manifest.lock */,
 				7982690A1F1F269B0090613B /* Sources */,
@@ -167,9 +167,9 @@
 			dependencies = (
 				798269101F1F269B0090613B /* PBXTargetDependency */,
 			);
-			name = TILoggerUnitTests;
+			name = SampleUnitTests;
 			productName = SampleTests;
-			productReference = 7982690E1F1F269B0090613B /* TILoggerUnitTests.xctest */;
+			productReference = 7982690E1F1F269B0090613B /* SampleUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 			projectRoot = "";
 			targets = (
 				798268F91F1F269B0090613B /* Sample */,
-				7982690D1F1F269B0090613B /* TILoggerUnitTests */,
+				7982690D1F1F269B0090613B /* SampleUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		798269251F1F269C0090613B /* Build configuration list for PBXNativeTarget "TILoggerUnitTests" */ = {
+		798269251F1F269C0090613B /* Build configuration list for PBXNativeTarget "SampleUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				798269261F1F269C0090613B /* Debug */,
