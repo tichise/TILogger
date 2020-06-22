@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TILogger'
-  s.version = '1.1.0'
+  s.version = '1.1.1'
   s.swift_versions = '5.0'
   s.license = 'MIT'
   s.summary = 'TILogger is a simple logger for swift.'
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/tichise/TILogger.git', :tag => s.version }
 
   s.ios.deployment_target = '11.0'
+  s.watchos.deployment_target = "4.0"
 
   s.source_files = 'Sources/*.swift'
   s.requires_arc = true
