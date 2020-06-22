@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				798268FC1F1F269B0090613B /* Sample */,
-				798269111F1F269B0090613B /* TILoggerUnitTests */,
+				798269111F1F269B0090613B /* SampleUnitTests */,
 				798268FB1F1F269B0090613B /* Products */,
 				C194C3163D03FAFD9E9E1123 /* Pods */,
 				5F52D1841BC317DA714C9235 /* Frameworks */,
@@ -111,13 +111,13 @@
 			path = Sample;
 			sourceTree = "<group>";
 		};
-		798269111F1F269B0090613B /* TILoggerUnitTests */ = {
+		798269111F1F269B0090613B /* SampleUnitTests */ = {
 			isa = PBXGroup;
 			children = (
 				798269121F1F269B0090613B /* TILoggerUnitTests.swift */,
 				798269141F1F269B0090613B /* Info.plist */,
 			);
-			path = TILoggerUnitTests;
+			path = SampleUnitTests;
 			sourceTree = "<group>";
 		};
 		C194C3163D03FAFD9E9E1123 /* Pods */ = {
