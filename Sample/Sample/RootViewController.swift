@@ -5,6 +5,7 @@
 
 import UIKit
 import TILogger
+import Utility
 
 class RootViewController: UITableViewController, UIAdaptivePresentationControllerDelegate {
 
@@ -16,6 +17,8 @@ class RootViewController: UITableViewController, UIAdaptivePresentationControlle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        TestUtil().test()
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,27 @@
 target 'Sample' do
   use_frameworks!
+  platform :ios, '11.0'
+
+  pod 'TILogger', :path => '../'
+
+  target 'SampleUnitTests' do
+    inherit! :search_paths
+    
+    pod 'TILogger', :path => '../'
+  end
+end
+
+target 'Utility' do
+  use_frameworks!
+  platform :ios, '11.0'
 
   pod 'TILogger', :path => '../'
 end
+
+target 'SampleWatchKitApp Extension' do
+  use_frameworks!
+  platform :watchos, '4.0'
+  
+  pod 'TILogger', :path => '../'
+end
+
