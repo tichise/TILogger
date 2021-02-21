@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'TILogger'
-  s.version = '1.2.1'
+  s.version = '1.2.2'
   s.swift_versions = '5.0'
   s.license = 'MIT'
   s.summary = 'TILogger is a simple logger for swift.'
