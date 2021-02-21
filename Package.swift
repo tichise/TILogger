@@ -5,6 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "TILogger",
+    platforms: [.iOS(.v10),
+                .watchOS(.v3)],
     products: [
         .library(name: "TILogger", targets: ["TILogger"])
     ],
