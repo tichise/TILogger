@@ -2,14 +2,19 @@ import XCTest
 @testable import TILogger
 
 final class TILoggerTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(TILogger().text, "Hello, World!")
-    }
+    func testExample() {        
+        TILogger().setPrefix("").verbose("test")
 
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+        TILogger().setPrefix("log").debug("test")
+
+        TILogger().setPrefix("TILogger").setDateFormat("yyyy/MM/dd HH:mm:ss").info("test")
+
+        TILogger().setPrefix("TILogger").setDateFormat( "HH:mm:ss").info("test")
+
+        TILogger().warning("test")
+
+        TILogger().error("test")
+
+        TILogger().verbose(2333)
+    }
 }
