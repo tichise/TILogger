@@ -12,8 +12,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "TILogger", path: "Sources"),
-        .testTarget(name: "TILoggerTests", dependencies: ["TILogger"]),
+        .target(name: "TILogger", path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
