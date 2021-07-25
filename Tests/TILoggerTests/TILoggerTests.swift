@@ -2,6 +2,7 @@ import XCTest
 @testable import TILogger
 
 final class TILoggerTests: XCTestCase {
+    
     func testExample() {        
         TILogger().setPrefix("").verbose("test")
 
