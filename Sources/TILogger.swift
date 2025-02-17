@@ -80,8 +80,7 @@ public class TILogger {
     let codePosition = file + " #" + String(line) + " " + function
 
     // Xcodeのコンソールに出力
-    prefix = prefix.count == 0 ? prefix : prefix + " "
-    let logHeader = dateString + " " + prefix + logLevel.rawValue + " " + codePosition + " - "
+    let logHeader = dateString + " " + prefix + " " + logLevel.rawValue + " " + codePosition + " - "
 
     print(logHeader, terminator: "")
     print(message)
