@@ -11,7 +11,8 @@ public class TILogger {
   private var dateFormat = "yyyy/MM/dd HH:mm:ss"
   private var logOutputType: LogOutputType = .console
 
-  public init() {
+  public init(prefix: String = "TILogger") {
+    self.prefix = prefix
   }
 
   public func setPrefix(_ prefix: String) -> Self {
@@ -133,5 +134,9 @@ public class TILogger {
     _ message: Any, file: String = #file, function: String = #function, line: Int = #line
   ) {
     shared.error(message, file: file, function: function, line: line)
+  }
+
+  public static func setPrefix(_ prefix: String) {
+    shared.setPrefix(prefix)
   }
 }
