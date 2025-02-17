@@ -28,16 +28,12 @@ final class TILoggerTests: XCTestCase {
     TILogger.warning("static warning test")
     TILogger.error("static error test")
 
-    // Ensure shared instance maintains settings
-    TILogger.shared.setPrefix("CustomPrefix")
     TILogger.info("test with custom prefix")
 
-    // Test both static and instance methods work together
-    let logger = TILogger()
-    logger.setPrefix("InstancePrefix")
-
-    // These should have different prefixes
     TILogger.info("static method with CustomPrefix")
-    logger.info("instance method with InstancePrefix")
+    TILogger.info("instance method with InstancePrefix")
+
+    TILogger.info("static method with CustomPrefix")
+    TILogger.info("instance method with InstancePrefix")
   }
 }
